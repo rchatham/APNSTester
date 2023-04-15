@@ -1,0 +1,581 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B10AE69E29EA5E75005FEFBB /* APNS_Push_Notification_TesterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10AE69D29EA5E75005FEFBB /* APNS_Push_Notification_TesterApp.swift */; };
+		B10AE6A029EA5E75005FEFBB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10AE69F29EA5E75005FEFBB /* ContentView.swift */; };
+		B10AE6A229EA5E78005FEFBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B10AE6A129EA5E78005FEFBB /* Assets.xcassets */; };
+		B10AE6A529EA5E78005FEFBB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B10AE6A429EA5E78005FEFBB /* Preview Assets.xcassets */; };
+		B10AE6B029EA5E78005FEFBB /* APNS_Push_Notification_TesterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10AE6AF29EA5E78005FEFBB /* APNS_Push_Notification_TesterTests.swift */; };
+		B10AE6BA29EA5E78005FEFBB /* APNS_Push_Notification_TesterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10AE6B929EA5E78005FEFBB /* APNS_Push_Notification_TesterUITests.swift */; };
+		B10AE6BC29EA5E78005FEFBB /* APNS_Push_Notification_TesterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10AE6BB29EA5E78005FEFBB /* APNS_Push_Notification_TesterUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B10AE6AC29EA5E78005FEFBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B10AE69229EA5E75005FEFBB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B10AE69929EA5E75005FEFBB;
+			remoteInfo = "APNS Push Notification Tester";
+		};
+		B10AE6B629EA5E78005FEFBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B10AE69229EA5E75005FEFBB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B10AE69929EA5E75005FEFBB;
+			remoteInfo = "APNS Push Notification Tester";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B10AE69A29EA5E75005FEFBB /* APNS Push Notification Tester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "APNS Push Notification Tester.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B10AE69D29EA5E75005FEFBB /* APNS_Push_Notification_TesterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APNS_Push_Notification_TesterApp.swift; sourceTree = "<group>"; };
+		B10AE69F29EA5E75005FEFBB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B10AE6A129EA5E78005FEFBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B10AE6A429EA5E78005FEFBB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B10AE6A629EA5E78005FEFBB /* APNS_Push_Notification_Tester.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = APNS_Push_Notification_Tester.entitlements; sourceTree = "<group>"; };
+		B10AE6AB29EA5E78005FEFBB /* APNS Push Notification TesterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "APNS Push Notification TesterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B10AE6AF29EA5E78005FEFBB /* APNS_Push_Notification_TesterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APNS_Push_Notification_TesterTests.swift; sourceTree = "<group>"; };
+		B10AE6B529EA5E78005FEFBB /* APNS Push Notification TesterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "APNS Push Notification TesterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B10AE6B929EA5E78005FEFBB /* APNS_Push_Notification_TesterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APNS_Push_Notification_TesterUITests.swift; sourceTree = "<group>"; };
+		B10AE6BB29EA5E78005FEFBB /* APNS_Push_Notification_TesterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APNS_Push_Notification_TesterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B10AE69729EA5E75005FEFBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B10AE6A829EA5E78005FEFBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B10AE6B229EA5E78005FEFBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B10AE69129EA5E75005FEFBB = {
+			isa = PBXGroup;
+			children = (
+				B10AE69C29EA5E75005FEFBB /* APNS Push Notification Tester */,
+				B10AE6AE29EA5E78005FEFBB /* APNS Push Notification TesterTests */,
+				B10AE6B829EA5E78005FEFBB /* APNS Push Notification TesterUITests */,
+				B10AE69B29EA5E75005FEFBB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B10AE69B29EA5E75005FEFBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B10AE69A29EA5E75005FEFBB /* APNS Push Notification Tester.app */,
+				B10AE6AB29EA5E78005FEFBB /* APNS Push Notification TesterTests.xctest */,
+				B10AE6B529EA5E78005FEFBB /* APNS Push Notification TesterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B10AE69C29EA5E75005FEFBB /* APNS Push Notification Tester */ = {
+			isa = PBXGroup;
+			children = (
+				B10AE69D29EA5E75005FEFBB /* APNS_Push_Notification_TesterApp.swift */,
+				B10AE69F29EA5E75005FEFBB /* ContentView.swift */,
+				B10AE6A129EA5E78005FEFBB /* Assets.xcassets */,
+				B10AE6A629EA5E78005FEFBB /* APNS_Push_Notification_Tester.entitlements */,
+				B10AE6A329EA5E78005FEFBB /* Preview Content */,
+			);
+			path = "APNS Push Notification Tester";
+			sourceTree = "<group>";
+		};
+		B10AE6A329EA5E78005FEFBB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B10AE6A429EA5E78005FEFBB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B10AE6AE29EA5E78005FEFBB /* APNS Push Notification TesterTests */ = {
+			isa = PBXGroup;
+			children = (
+				B10AE6AF29EA5E78005FEFBB /* APNS_Push_Notification_TesterTests.swift */,
+			);
+			path = "APNS Push Notification TesterTests";
+			sourceTree = "<group>";
+		};
+		B10AE6B829EA5E78005FEFBB /* APNS Push Notification TesterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B10AE6B929EA5E78005FEFBB /* APNS_Push_Notification_TesterUITests.swift */,
+				B10AE6BB29EA5E78005FEFBB /* APNS_Push_Notification_TesterUITestsLaunchTests.swift */,
+			);
+			path = "APNS Push Notification TesterUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B10AE69929EA5E75005FEFBB /* APNS Push Notification Tester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B10AE6BF29EA5E78005FEFBB /* Build configuration list for PBXNativeTarget "APNS Push Notification Tester" */;
+			buildPhases = (
+				B10AE69629EA5E75005FEFBB /* Sources */,
+				B10AE69729EA5E75005FEFBB /* Frameworks */,
+				B10AE69829EA5E75005FEFBB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "APNS Push Notification Tester";
+			productName = "APNS Push Notification Tester";
+			productReference = B10AE69A29EA5E75005FEFBB /* APNS Push Notification Tester.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B10AE6AA29EA5E78005FEFBB /* APNS Push Notification TesterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B10AE6C229EA5E78005FEFBB /* Build configuration list for PBXNativeTarget "APNS Push Notification TesterTests" */;
+			buildPhases = (
+				B10AE6A729EA5E78005FEFBB /* Sources */,
+				B10AE6A829EA5E78005FEFBB /* Frameworks */,
+				B10AE6A929EA5E78005FEFBB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B10AE6AD29EA5E78005FEFBB /* PBXTargetDependency */,
+			);
+			name = "APNS Push Notification TesterTests";
+			productName = "APNS Push Notification TesterTests";
+			productReference = B10AE6AB29EA5E78005FEFBB /* APNS Push Notification TesterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B10AE6B429EA5E78005FEFBB /* APNS Push Notification TesterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B10AE6C529EA5E78005FEFBB /* Build configuration list for PBXNativeTarget "APNS Push Notification TesterUITests" */;
+			buildPhases = (
+				B10AE6B129EA5E78005FEFBB /* Sources */,
+				B10AE6B229EA5E78005FEFBB /* Frameworks */,
+				B10AE6B329EA5E78005FEFBB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B10AE6B729EA5E78005FEFBB /* PBXTargetDependency */,
+			);
+			name = "APNS Push Notification TesterUITests";
+			productName = "APNS Push Notification TesterUITests";
+			productReference = B10AE6B529EA5E78005FEFBB /* APNS Push Notification TesterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B10AE69229EA5E75005FEFBB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					B10AE69929EA5E75005FEFBB = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					B10AE6AA29EA5E78005FEFBB = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = B10AE69929EA5E75005FEFBB;
+					};
+					B10AE6B429EA5E78005FEFBB = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = B10AE69929EA5E75005FEFBB;
+					};
+				};
+			};
+			buildConfigurationList = B10AE69529EA5E75005FEFBB /* Build configuration list for PBXProject "APNS Push Notification Tester" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B10AE69129EA5E75005FEFBB;
+			productRefGroup = B10AE69B29EA5E75005FEFBB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B10AE69929EA5E75005FEFBB /* APNS Push Notification Tester */,
+				B10AE6AA29EA5E78005FEFBB /* APNS Push Notification TesterTests */,
+				B10AE6B429EA5E78005FEFBB /* APNS Push Notification TesterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B10AE69829EA5E75005FEFBB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B10AE6A529EA5E78005FEFBB /* Preview Assets.xcassets in Resources */,
+				B10AE6A229EA5E78005FEFBB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B10AE6A929EA5E78005FEFBB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B10AE6B329EA5E78005FEFBB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B10AE69629EA5E75005FEFBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B10AE6A029EA5E75005FEFBB /* ContentView.swift in Sources */,
+				B10AE69E29EA5E75005FEFBB /* APNS_Push_Notification_TesterApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B10AE6A729EA5E78005FEFBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B10AE6B029EA5E78005FEFBB /* APNS_Push_Notification_TesterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B10AE6B129EA5E78005FEFBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B10AE6BC29EA5E78005FEFBB /* APNS_Push_Notification_TesterUITestsLaunchTests.swift in Sources */,
+				B10AE6BA29EA5E78005FEFBB /* APNS_Push_Notification_TesterUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B10AE6AD29EA5E78005FEFBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B10AE69929EA5E75005FEFBB /* APNS Push Notification Tester */;
+			targetProxy = B10AE6AC29EA5E78005FEFBB /* PBXContainerItemProxy */;
+		};
+		B10AE6B729EA5E78005FEFBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B10AE69929EA5E75005FEFBB /* APNS Push Notification Tester */;
+			targetProxy = B10AE6B629EA5E78005FEFBB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B10AE6BD29EA5E78005FEFBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B10AE6BE29EA5E78005FEFBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		B10AE6C029EA5E78005FEFBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "APNS Push Notification Tester/APNS_Push_Notification_Tester.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"APNS Push Notification Tester/Preview Content\"";
+				DEVELOPMENT_TEAM = 82W93M4H92;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.reidchatham.APNS-Push-Notification-Tester";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B10AE6C129EA5E78005FEFBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "APNS Push Notification Tester/APNS_Push_Notification_Tester.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"APNS Push Notification Tester/Preview Content\"";
+				DEVELOPMENT_TEAM = 82W93M4H92;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.reidchatham.APNS-Push-Notification-Tester";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		B10AE6C329EA5E78005FEFBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 82W93M4H92;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.reidchatham.APNS-Push-Notification-TesterTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/APNS Push Notification Tester.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/APNS Push Notification Tester";
+			};
+			name = Debug;
+		};
+		B10AE6C429EA5E78005FEFBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 82W93M4H92;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.reidchatham.APNS-Push-Notification-TesterTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/APNS Push Notification Tester.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/APNS Push Notification Tester";
+			};
+			name = Release;
+		};
+		B10AE6C629EA5E78005FEFBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 82W93M4H92;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.reidchatham.APNS-Push-Notification-TesterUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "APNS Push Notification Tester";
+			};
+			name = Debug;
+		};
+		B10AE6C729EA5E78005FEFBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 82W93M4H92;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.reidchatham.APNS-Push-Notification-TesterUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "APNS Push Notification Tester";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B10AE69529EA5E75005FEFBB /* Build configuration list for PBXProject "APNS Push Notification Tester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B10AE6BD29EA5E78005FEFBB /* Debug */,
+				B10AE6BE29EA5E78005FEFBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B10AE6BF29EA5E78005FEFBB /* Build configuration list for PBXNativeTarget "APNS Push Notification Tester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B10AE6C029EA5E78005FEFBB /* Debug */,
+				B10AE6C129EA5E78005FEFBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B10AE6C229EA5E78005FEFBB /* Build configuration list for PBXNativeTarget "APNS Push Notification TesterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B10AE6C329EA5E78005FEFBB /* Debug */,
+				B10AE6C429EA5E78005FEFBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B10AE6C529EA5E78005FEFBB /* Build configuration list for PBXNativeTarget "APNS Push Notification TesterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B10AE6C629EA5E78005FEFBB /* Debug */,
+				B10AE6C729EA5E78005FEFBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B10AE69229EA5E75005FEFBB /* Project object */;
+}
