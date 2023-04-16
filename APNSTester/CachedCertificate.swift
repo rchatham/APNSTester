@@ -29,12 +29,6 @@ struct CachedCertificate {
         UserDefaults.standard.string(forKey: userDefaultsKey)
     }
 
-    static func getCommonName(from certificate: SecCertificate) -> String? {
-        var commonName: CFString?
-        let status = SecCertificateCopyCommonName(certificate, &commonName)
-        return status == errSecSuccess ? commonName! as String : nil
-    }
-
     static func retrieveCertificate(withCommonName commonName: String) -> SecCertificate? {
         let query: [CFString: Any] = [
             kSecClass: kSecClassCertificate,
@@ -68,5 +62,11 @@ struct CachedCertificate {
         }
 
         return certs
+    }
+
+    private static func getCommonName(from certificate: SecCertificate) -> String? {
+        var commonName: CFString?
+        let status = SecCertificateCopyCommonName(certificate, &commonName)
+        return status == errSecSuccess ? commonName! as String : nil
     }
 }
