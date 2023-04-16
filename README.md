@@ -29,4 +29,4 @@ open APNSTester.xcodeproj
 5. Click "Send Push Notification" to send the push notification.
 
 ## License
-APNSTester is licensed under the Apache License 2.0. See the LICENSE file for details.
+The APNSTester is released under the MIT License. See the LICENSE file for details.
