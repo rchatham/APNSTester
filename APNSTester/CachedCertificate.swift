@@ -9,7 +9,6 @@ import SwiftUI
 import Security
 
 struct CachedCertificate {
-    private static var cache: [String: SecCertificate] = [:]
     private let userDefaultsKey: String
 
     init(userDefaultsKey: String) {
