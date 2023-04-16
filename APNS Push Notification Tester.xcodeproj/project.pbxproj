@@ -14,6 +14,9 @@
 		B10AE6B029EA5E78005FEFBB /* APNS_Push_Notification_TesterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10AE6AF29EA5E78005FEFBB /* APNS_Push_Notification_TesterTests.swift */; };
 		B10AE6BA29EA5E78005FEFBB /* APNS_Push_Notification_TesterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10AE6B929EA5E78005FEFBB /* APNS_Push_Notification_TesterUITests.swift */; };
 		B10AE6BC29EA5E78005FEFBB /* APNS_Push_Notification_TesterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10AE6BB29EA5E78005FEFBB /* APNS_Push_Notification_TesterUITestsLaunchTests.swift */; };
+		B10AE6C929EA5EC6005FEFBB /* APNSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10AE6C829EA5EC6005FEFBB /* APNSManager.swift */; };
+		B10AE6CC29EA5FE7005FEFBB /* SecurityInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B10AE6CB29EA5FE7005FEFBB /* SecurityInterface.framework */; };
+		B10AE6D029EA633F005FEFBB /* CertificatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10AE6CF29EA633F005FEFBB /* CertificatePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		B10AE6B529EA5E78005FEFBB /* APNS Push Notification TesterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "APNS Push Notification TesterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B10AE6B929EA5E78005FEFBB /* APNS_Push_Notification_TesterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APNS_Push_Notification_TesterUITests.swift; sourceTree = "<group>"; };
 		B10AE6BB29EA5E78005FEFBB /* APNS_Push_Notification_TesterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APNS_Push_Notification_TesterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B10AE6C829EA5EC6005FEFBB /* APNSManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APNSManager.swift; sourceTree = "<group>"; };
+		B10AE6CB29EA5FE7005FEFBB /* SecurityInterface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SecurityInterface.framework; path = System/Library/Frameworks/SecurityInterface.framework; sourceTree = SDKROOT; };
+		B10AE6CF29EA633F005FEFBB /* CertificatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificatePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B10AE6CC29EA5FE7005FEFBB /* SecurityInterface.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +86,7 @@
 				B10AE6AE29EA5E78005FEFBB /* APNS Push Notification TesterTests */,
 				B10AE6B829EA5E78005FEFBB /* APNS Push Notification TesterUITests */,
 				B10AE69B29EA5E75005FEFBB /* Products */,
+				B10AE6CA29EA5FE7005FEFBB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +105,8 @@
 			children = (
 				B10AE69D29EA5E75005FEFBB /* APNS_Push_Notification_TesterApp.swift */,
 				B10AE69F29EA5E75005FEFBB /* ContentView.swift */,
+				B10AE6CF29EA633F005FEFBB /* CertificatePicker.swift */,
+				B10AE6C829EA5EC6005FEFBB /* APNSManager.swift */,
 				B10AE6A129EA5E78005FEFBB /* Assets.xcassets */,
 				B10AE6A629EA5E78005FEFBB /* APNS_Push_Notification_Tester.entitlements */,
 				B10AE6A329EA5E78005FEFBB /* Preview Content */,
@@ -127,6 +137,14 @@
 				B10AE6BB29EA5E78005FEFBB /* APNS_Push_Notification_TesterUITestsLaunchTests.swift */,
 			);
 			path = "APNS Push Notification TesterUITests";
+			sourceTree = "<group>";
+		};
+		B10AE6CA29EA5FE7005FEFBB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B10AE6CB29EA5FE7005FEFBB /* SecurityInterface.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +278,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B10AE6A029EA5E75005FEFBB /* ContentView.swift in Sources */,
+				B10AE6C929EA5EC6005FEFBB /* APNSManager.swift in Sources */,
 				B10AE69E29EA5E75005FEFBB /* APNS_Push_Notification_TesterApp.swift in Sources */,
+				B10AE6D029EA633F005FEFBB /* CertificatePicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
