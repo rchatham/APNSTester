@@ -8,16 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var selectedCertificate: SecCertificate?
-    @State private var deviceToken: String = ""
-    @State private var alertTitle: String = ""
-    @State private var alertBody: String = ""
-    @State private var statusMessage: String = ""
+    @State private var cachedCertificate = CachedCertificate(userDefaultsKey: "selectedCertificateCommonName")
+    @AppStorage("appId") private var appId: String = ""
+    @AppStorage("deviceToken") private var deviceToken: String = ""
+    @AppStorage("alertTitle") private var alertTitle: String = ""
+    @AppStorage("alertBody") private var alertBody: String = ""
+    @AppStorage("jsonPayload") private var jsonPayload: String = ""
+    @AppStorage("useAdvanced") private var useAdvanced: Bool = false
+    @AppStorage("useSandbox") private var useSandbox: Bool = true
     @State private var showCertificatePicker: Bool = false
-    @State private var appId: String = ""
-    @State private var useSandbox: Bool = true
-    @State private var useAdvanced: Bool = false
-    @State private var jsonPayload: String = ""
+    @State private var statusMessage: String = ""
+    @State private var statusSuccess: Bool = false
 
     var body: some View {
         VStack {
@@ -26,9 +27,8 @@ struct ContentView: View {
                 Button("Choose") {
                     showCertificatePicker = true
                 }
-                if let certificate = selectedCertificate,
-                   let commonName = getCommonName(from: certificate) {
-                    Text(commonName)
+                if cachedCertificate.certificate != nil {
+                    Text(cachedCertificate.commonName ?? "")
                         .foregroundColor(.blue)
                 }
                 TextField("App ID", text: $appId) // Add the App ID text field
@@ -49,28 +49,17 @@ struct ContentView: View {
                 }
             }.padding()
             Text(statusMessage)
-                .foregroundColor(.red)
+                .foregroundColor(statusSuccess ? .green : .red)
         }
         .sheet(isPresented: $showCertificatePicker) {
-            CertificatePickerView(selectedCertificate: $selectedCertificate, showCertificatePicker: $showCertificatePicker)
+            CertificatePickerView(cachedCertificate: $cachedCertificate, showCertificatePicker: $showCertificatePicker)
                 .frame(minWidth: 300, minHeight: 200)
         }
     }
 
-    private func getCertificate(from identity: SecIdentity) -> SecCertificate? {
-        var certificate: SecCertificate?
-        let status = SecIdentityCopyCertificate(identity, &certificate)
-        return status == errSecSuccess ? certificate : nil
-    }
-
-    private func getCommonName(from certificate: SecCertificate) -> String? {
-        var commonName: CFString?
-        let status = SecCertificateCopyCommonName(certificate, &commonName)
-        return status == errSecSuccess ? commonName! as String : nil
-    }
-
     private func sendPushNotification() {
-        guard let certificate = selectedCertificate, !deviceToken.isEmpty, !appId.isEmpty else {
+        guard let certificate = cachedCertificate.certificate, !deviceToken.isEmpty, !appId.isEmpty else {
+            statusSuccess = false
             statusMessage = "Please select a certificate, enter the device token, and enter the app ID."
             return
         }
@@ -79,8 +68,10 @@ struct ContentView: View {
             DispatchQueue.main.async {
                 switch result {
                 case .success:
+                    statusSuccess = true
                     statusMessage = "Push notification sent successfully."
                 case .failure(let error):
+                    statusSuccess = false
                     switch error {
                     case .invalidDeviceToken:
                         statusMessage = "Invalid device token."

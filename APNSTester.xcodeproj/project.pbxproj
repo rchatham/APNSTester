@@ -17,6 +17,7 @@
 		B10AE6C929EA5EC6005FEFBB /* APNSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10AE6C829EA5EC6005FEFBB /* APNSManager.swift */; };
 		B10AE6CC29EA5FE7005FEFBB /* SecurityInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B10AE6CB29EA5FE7005FEFBB /* SecurityInterface.framework */; };
 		B10AE6D029EA633F005FEFBB /* CertificatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10AE6CF29EA633F005FEFBB /* CertificatePicker.swift */; };
+		B10AE6D229EC7C6B005FEFBB /* CachedCertificate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10AE6D129EC7C6B005FEFBB /* CachedCertificate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		B10AE6C829EA5EC6005FEFBB /* APNSManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APNSManager.swift; sourceTree = "<group>"; };
 		B10AE6CB29EA5FE7005FEFBB /* SecurityInterface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SecurityInterface.framework; path = System/Library/Frameworks/SecurityInterface.framework; sourceTree = SDKROOT; };
 		B10AE6CF29EA633F005FEFBB /* CertificatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificatePicker.swift; sourceTree = "<group>"; };
+		B10AE6D129EC7C6B005FEFBB /* CachedCertificate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedCertificate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				B10AE69F29EA5E75005FEFBB /* ContentView.swift */,
 				B10AE6CF29EA633F005FEFBB /* CertificatePicker.swift */,
 				B10AE6C829EA5EC6005FEFBB /* APNSManager.swift */,
+				B10AE6D129EC7C6B005FEFBB /* CachedCertificate.swift */,
 				B10AE6A129EA5E78005FEFBB /* Assets.xcassets */,
 				B10AE6A629EA5E78005FEFBB /* APNSTester.entitlements */,
 				B10AE6A329EA5E78005FEFBB /* Preview Content */,
@@ -281,6 +284,7 @@
 				B10AE6C929EA5EC6005FEFBB /* APNSManager.swift in Sources */,
 				B10AE69E29EA5E75005FEFBB /* APNSTesterApp.swift in Sources */,
 				B10AE6D029EA633F005FEFBB /* CertificatePicker.swift in Sources */,
+				B10AE6D229EC7C6B005FEFBB /* CachedCertificate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

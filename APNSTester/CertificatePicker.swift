@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CertificatePickerView: View {
-    @Binding var selectedCertificate: SecCertificate?
+    @Binding var cachedCertificate: CachedCertificate
     @Binding var showCertificatePicker: Bool
     @State private var certificates: [SecCertificate] = []
 
@@ -17,13 +17,13 @@ struct CertificatePickerView: View {
             if let commonName = SecCertificateCopySubjectSummary(certificates[index]) as String? {
                 Text(commonName)
                     .onTapGesture {
-                        selectedCertificate = certificates[index]
+                        cachedCertificate.certificate = certificates[index]
                         showCertificatePicker = false
                     }
             }
         }
         .onAppear {
-            certificates = searchKeychainForCerts()
+            certificates = CachedCertificate.searchKeychainForCerts()
         }
         .toolbar {
             ToolbarItem(placement: .confirmationAction) {
@@ -32,23 +32,5 @@ struct CertificatePickerView: View {
                 }
             }
         }
-    }
-    
-    func searchKeychainForCerts() -> [SecCertificate] {
-        let query: [CFString: Any] = [
-            kSecClass: kSecClassCertificate,
-            kSecMatchLimit: kSecMatchLimitAll,
-            kSecReturnRef: true
-        ]
-
-        var result: CFTypeRef?
-        let status = SecItemCopyMatching(query as CFDictionary, &result)
-
-        guard status == errSecSuccess, let certs = result as? [SecCertificate] else {
-            print("Error searching keychain: \(status)")
-            return []
-        }
-
-        return certs
     }
 }
