@@ -1,6 +1,6 @@
 //
-//  APNS_Push_Notification_TesterApp.swift
-//  APNS Push Notification Tester
+//  APNSTesterApp.swift
+//  APNSTester
 //
 //  Created by Reid Chatham on 4/14/23.
 //
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct APNS_Push_Notification_TesterApp: App {
+struct APNSTesterApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

@@ -1,13 +1,13 @@
 //
-//  APNS_Push_Notification_TesterUITestsLaunchTests.swift
-//  APNS Push Notification TesterUITests
+//  APNSTesterUITestsLaunchTests.swift
+//  APNSTesterUITests
 //
 //  Created by Reid Chatham on 4/14/23.
 //
 
 import XCTest
 
-final class APNS_Push_Notification_TesterUITestsLaunchTests: XCTestCase {
+final class APNSTesterUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
