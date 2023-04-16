@@ -14,18 +14,17 @@ class APNSManager: NSObject, URLSessionDelegate {
         case connectionError
         case payloadError
     }
-    
+
     static let shared = APNSManager()
-    
+
     private lazy var urlSession: URLSession = {
         let configuration = URLSessionConfiguration.default
         let session = URLSession(configuration: configuration, delegate: self, delegateQueue: nil)
         return session
     }()
-    
+
     private var certificate: SecCertificate?
-    
-    
+
     /*
      Test payload:
      {
@@ -38,7 +37,7 @@ class APNSManager: NSObject, URLSessionDelegate {
        }
      }
      */
-    
+
     func sendPushNotification(certificate: SecCertificate, appId: String, deviceToken: String, title: String, body: String, customPayload: String, useSandbox: Bool, completion: @escaping (Result<Void, APNSError>) -> Void) {
         self.certificate = certificate
         // 1. Extract the identity from the keychain
@@ -46,7 +45,7 @@ class APNSManager: NSObject, URLSessionDelegate {
             completion(.failure(.invalidIdentity))
             return
         }
-        
+
         // 2. Establish a secure connection to the APNS server
         let environment = useSandbox ? "api.sandbox" : "api"
         let apnsURL = URL(string: "https://\(environment).push.apple.com/3/device/\(deviceToken)")!
@@ -55,7 +54,7 @@ class APNSManager: NSObject, URLSessionDelegate {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue("bearer \(identity)", forHTTPHeaderField: "authorization")
         request.setValue(appId, forHTTPHeaderField: "apns-topic") // Add the app ID to the request headers
-        
+
         // 3. Create a JSON payload
         if customPayload.isEmpty {
             let payload: [String: Any] = [
@@ -67,7 +66,7 @@ class APNSManager: NSObject, URLSessionDelegate {
                     "sound": "default"
                 ]
             ]
-            
+
             do {
                 request.httpBody = try JSONSerialization.data(withJSONObject: payload, options: [])
             } catch {
@@ -82,7 +81,7 @@ class APNSManager: NSObject, URLSessionDelegate {
                return
            }
         }
-        
+
         // 4. Send the push notification
         let task = urlSession.dataTask(with: request) { data, response, error in
             if let error = error {
@@ -90,19 +89,19 @@ class APNSManager: NSObject, URLSessionDelegate {
                 completion(.failure(.connectionError))
                 return
             }
-            
+
             guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
                 completion(.failure(.connectionError))
                 return
             }
-            
+
             // 5. Handle the response from the APNS server
             completion(.success(()))
         }
-        
+
         task.resume()
     }
-    
+
     private func extractIdentity(certificate: SecCertificate) -> SecIdentity? {
         var identity: SecIdentity?
         var identityRef: CFTypeRef?
@@ -112,24 +111,24 @@ class APNSManager: NSObject, URLSessionDelegate {
             kSecMatchLimit: kSecMatchLimitOne,
             kSecMatchItemList: [certificate] as CFArray
         ]
-        
+
         let status = SecItemCopyMatching(query as CFDictionary, &identityRef)
         guard status == errSecSuccess, let ref = identityRef else {
             print("Error extracting identity: \(status)")
             return nil
         }
-        
+
         identity = (ref as! SecIdentity)
         return identity
     }
-    
+
     func processCustomPayload(_ payload: String) -> String? {
         let trimmedPayload = payload.trimmingCharacters(in: .whitespacesAndNewlines)
         let replacedSmartQuotes = trimmedPayload.replacingOccurrences(of: "“|”", with: "\"", options: .regularExpression)
         let fixedEscapedQuotes = replacedSmartQuotes.replacingOccurrences(of: "\\\\\"", with: "\"", options: .regularExpression)
         let fixedKeys = addQuotesToKeys(in: fixedEscapedQuotes)
         let unwrappedPayload = fixedKeys.trimmingCharacters(in: .init(charactersIn: "\""))
-        
+
         guard let data = unwrappedPayload.data(using: .utf8) else {
             return nil
         }
@@ -158,7 +157,7 @@ class APNSManager: NSObject, URLSessionDelegate {
             return jsonString
         }
     }
-    
+
     // URLSessionDelegate methods
     func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
         guard challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodClientCertificate,
@@ -167,7 +166,7 @@ class APNSManager: NSObject, URLSessionDelegate {
             completionHandler(.performDefaultHandling, nil)
             return
         }
-        
+
         let credential = URLCredential(identity: identity, certificates: [certificate], persistence: .forSession)
         completionHandler(.useCredential, credential)
     }
