@@ -125,8 +125,7 @@ class APNSManager: NSObject, URLSessionDelegate {
     func processCustomPayload(_ payload: String) -> String? {
         let trimmedPayload = payload.trimmingCharacters(in: .whitespacesAndNewlines)
         let replacedSmartQuotes = trimmedPayload.replacingOccurrences(of: "“|”", with: "\"", options: .regularExpression)
-        let fixedEscapedQuotes = replacedSmartQuotes.replacingOccurrences(of: "\\\\\"", with: "\"", options: .regularExpression)
-        let fixedKeys = addQuotesToKeys(in: fixedEscapedQuotes)
+        let fixedKeys = addQuotesToKeys(in: replacedSmartQuotes)
         let unwrappedPayload = fixedKeys.trimmingCharacters(in: .init(charactersIn: "\""))
 
         guard let data = unwrappedPayload.data(using: .utf8) else {
@@ -144,8 +143,8 @@ class APNSManager: NSObject, URLSessionDelegate {
         }
     }
 
-    private func addQuotesToKeys(in jsonString: String) -> String {
-        let regexPattern = "(?<=\\s|^)(\\w+)(?=\\s*:)"
+    func addQuotesToKeys(in jsonString: String) -> String {
+        let regexPattern = "(?<=\\n|,|\\{)(?<!\\\\\"|\"|\\\\'|')\\s*([a-zA-Z0-9_-]+)(?=\\s*:)\\s*(?!\"|\\\\\"|'|\\\\')"
 
         do {
             let regex = try NSRegularExpression(pattern: regexPattern, options: [])
